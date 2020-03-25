@@ -69,7 +69,6 @@ INSTALLED_APPS = [
     #lib apps
     'corsheaders',
     'rest_framework',
-    'drf_multiple_model',
     'django_extensions',
     'taggit',
     'ckeditor',
@@ -120,7 +119,7 @@ CORS_ORIGIN_WHITELIST = [
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR,'blogs/templates')],
+        'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

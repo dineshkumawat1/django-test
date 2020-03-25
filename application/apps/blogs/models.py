@@ -66,16 +66,19 @@ class BlogCategory(models.Model):
 
     def __str__(self):
         return self.name
+
     
     @property
     def blogs(self):
         return self.blog_set.all()
 
 
+
 class BlogPost(models.Model):
     """
     model for managing blog posts
     """
+
     category = models.ManyToManyField(BlogCategory,related_name='blog_set')
     title = models.CharField(max_length=255, blank=True, null=True)
     slug = models.SlugField(
@@ -161,6 +164,7 @@ class BlogPost(models.Model):
     @property
     def comment_count(self):
         return self.comments.all().count()
+
     
     @property
     def author(self):
@@ -175,7 +179,6 @@ class BlogPost(models.Model):
         except Exception as e:
             return False
     
-        
 
 
 class BlogReaction(models.Model):

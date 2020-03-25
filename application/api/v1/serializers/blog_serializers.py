@@ -1,5 +1,6 @@
 from rest_framework import serializers
 from apps.blogs.models import BlogCategory, BlogPost, BlogReaction, Comment, CommentReaction
+
 from apps.users.models import User
 
            
@@ -51,3 +52,4 @@ class BlogCategoryDetailSerializer(serializers.ModelSerializer):
                 'meta_keywords' ,
                 'meta_title',
                 'blogs',]      
+

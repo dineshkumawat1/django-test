@@ -229,11 +229,11 @@ class UserDetailAPI(APIView):
     """
     API for getting user details
     """
-    # permission_classes = (permissions.IsAuthenticated,)
+    permission_classes = (permissions.IsAuthenticated,)
 
     def get(self, request):
-        # serializer = UserDetailsSerializer(request.user)
-        serializer = UserDetailsSerializer()
+        serializer = UserDetailsSerializer(request.user)
+
         return Response(
             {
                 'status': status.HTTP_200_OK,

@@ -56,7 +56,7 @@ PyJWT==1.7.1
 python-social-auth==0.2.1
 python3-openid==3.1.0
 pytz==2019.1
-PyYAML==5.1.1
+PyYAML==5.4
 redis==3.3.8
 requests==2.22.0
 requests-oauthlib==1.2.0
